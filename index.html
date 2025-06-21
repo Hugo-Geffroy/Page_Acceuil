@@ -11,15 +11,57 @@
       padding: 30px;
       color: #5a189a;
     }
+
     h1 {
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 40px;
     }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .search-bar form {
+      display: flex;
+      border: 2px solid #c084fc;
+      border-radius: 30px;
+      overflow: hidden;
+      background-color: #fff0fb;
+      box-shadow: 0 4px 10px rgba(174, 132, 255, 0.2);
+    }
+
+    .search-bar input[type="text"] {
+      border: none;
+      padding: 10px 15px;
+      font-size: 1em;
+      width: 250px;
+      outline: none;
+      background: transparent;
+      color: #4b0082;
+    }
+
+    .search-bar button {
+      background-color: #c084fc;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #a45deb;
+    }
+
     .category {
       margin-bottom: 60px;
       text-align: center;
     }
+
     .category h2 {
       font-size: 1.8em;
       display: inline-block;
@@ -27,12 +69,14 @@
       padding-bottom: 5px;
       margin-bottom: 25px;
     }
+
     .links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
+
     .link-card {
       background-color: #fff0fb;
       border-radius: 16px;
@@ -44,31 +88,35 @@
       color: #4b0082;
       transition: transform 0.2s ease, background-color 0.3s ease;
     }
+
     .link-card:hover {
       background-color: #ecd8ff;
       transform: translateY(-5px);
     }
+
     .link-card img {
       width: 48px;
       height: 48px;
       margin-bottom: 10px;
     }
+
     @media (max-width: 600px) {
       .links {
         flex-direction: column;
         align-items: center;
       }
+
+      .search-bar form {
+        flex-direction: column;
+      }
+
+      .search-bar input[type="text"],
+      .search-bar button {
+        width: 100%;
+        border-radius: 0;
+      }
     }
   </style>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Ma Page d'Accueil</title>
-  <link rel="stylesheet" href="style.css"> <!-- Si tu as un fichier CSS -->
 </head>
 <body>
 
@@ -82,79 +130,19 @@
     </form>
   </div>
 
-  <!-- Groupe 1 : ÉCOLES / ACCÈS RAPIDE -->
+  <!-- Groupe 1 : ACCES RAPIDE -->
   <div class="category">
     <h2>ACCES RAPIDE</h2>
     <div class="links">
+      <!-- Tes liens ici -->
+      <!-- Exemples -->
       <a class="link-card" href="https://m365.cloud.microsoft/search/?auth=2&from=NoAccountOnStart" target="_blank">
         <img src="logo/microsoft_365.png" alt="Microsoft 365"> Microsoft 365
       </a>
       <a class="link-card" href="https://gclasse.fr/Index_Accueil" target="_blank">
         <img src="logo/gclasse.png" alt="GClasse"> GClasse
       </a>
-      <a class="link-card" href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html" target="_blank">
-        <img src="logo/cisco.png" alt="Cisco"> Cisco
-      </a>
-      <a class="link-card" href="https://www.netacad.com/fr/" target="_blank">
-        <img src="logo/cisco_netacad.png" alt="Cisco Netacad"> Cisco Netacad
-      </a>
-      <a class="link-card" href="https://chat.mistral.ai/chat" target="_blank">
-        <img src="logo/le_chat.png" alt="Le Chat Mistral"> Le CHAT
-      </a>
-      <a class="link-card" href="https://chatgpt.com/" target="_blank">
-        <img src="logo/chat_gpt.png" alt="ChatGPT"> ChatGPT
-      </a>
-      <a class="link-card" href="https://trello.com/fr" target="_blank">
-        <img src="logo/trello.png" alt="Trello"> Trello
-      </a>
-      <a class="link-card" href="https://github.com/" target="_blank">
-        <img src="logo/github.png" alt="GitHub"> GitHub
-      </a>
-      <!-- Liens ajoutés -->
-      <a class="link-card" href="https://app.diagrams.net/" target="_blank">
-        <img src="logo/drawio.png" alt="draw.io"> draw.io
-      </a>
-      <a class="link-card" href="https://www.canva.com/" target="_blank">
-        <img src="logo/canva.png" alt="Canva"> Canva
-      </a>
-      <a class="link-card" href="https://teams.microsoft.com/" target="_blank">
-        <img src="logo/teams.png" alt="Microsoft Teams"> Teams
-      </a>
-      <a class="link-card" href="https://vercel.com/" target="_blank">
-        <img src="logo/vercel.png" alt="Vercel"> Vercel
-      </a>
-      <a class="link-card" href="https://obsigeffgo.vercel.app/" target="_blank">
-        <img src="logo/digital_garden.png" alt="Digital Garden"> Digital Garden
-      </a>
-          <div class="links">
-      <a class="link-card" href="https://www.google.com" target="_blank">
-        <img src="logo/google.png" alt="Google">
-        Google
-      </a>
-      <a class="link-card" href="https://www.youtube.com" target="_blank">
-        <img src="logo/youtube.png" alt="YouTube">
-        YouTube
-      </a>
-      <a class="link-card" href="https://mail.google.com" target="_blank">
-        <img src="logo/gmail.png" alt="Gmail">
-        Gmail
-      </a>
-      <a class="link-card" href="https://proton.me/fr/mail" target="_blank">
-        <img src="logo/proton.png" alt="Proton">
-        Proton
-      </a>
-      <a class="link-card" href="https://www.gartner.com/en/research/magic-quadrant" target="_blank">
-        <img src="logo/gartner.png" alt="Gartner">
-        Gartner
-      </a>
-      <a class="link-card" href="https://learn.microsoft.com/fr-fr/training/" target="_blank">
-        <img src="logo/microsoft.png" alt="Microsoft Learn">
-        Microsoft Learn
-      </a>
-      <a class="link-card" href="https://fr.overleaf.com/" target="_blank">
-        <img src="logo/overleaf.png" alt="Overleaf">
-        Overleaf
-      </a>
+      <!-- Ajoute ici le reste de tes liens -->
     </div>
   </div>
 
@@ -175,5 +163,4 @@
   </div>
 
 </body>
-</html>
 </html>
